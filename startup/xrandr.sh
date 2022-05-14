@@ -5,7 +5,7 @@
 # Changes the specified display's resolution.
 # Run 'xrandr --listmonitors' on a terminal to see what you need to replace DISPLAY with.
 # Feel free to copy and paste this depending on how many displays you have.
-xrandr --output DISPLAY --mode WIDTHxHEIGHTxREFRESHRATE
+xrandr --output DISPLAY --mode WIDTHxHEIGHT --refresh REFRESHRATE
 
 # Changes displays position.
 # Change --POSITION to either --left-of, --right-of, --above, or --below.
