@@ -7,7 +7,7 @@ itExists=0
 # Creates the startup variable. I only used this so that I don't have to type out so much stuff.
 startup=bash ~/.startup/
 
-cp -r startup/ ~ && mv ~/startup ~/.startup # Moves startup folder into ~ folder and makes it hidden.
+mv startup/ .startup/ && cp -r startup/ ~/ # Moves startup folder into ~ folder and makes it hidden.
 
 # Checks if .profile is existing. If not, $exists will stay at 0. If it does exist, then it changes it to 1.
 test -r ~/.profile && $itExists=1
