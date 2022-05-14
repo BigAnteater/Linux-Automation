@@ -8,7 +8,7 @@ itExists=0
 mv startup/ .startup/ && cp -r .startup/ ~/ 
 
 # Creates the startup variable. I only used this so that I don't have to type out so much stuff.
-startup=bash ~/.startup/
+startup=~/.startup/
 
 # Checks if .profile is existing. If not, $exists will stay at 0. If it does exist, then it changes it to 1.
 test -r ~/.profile && itExists=1
@@ -21,7 +21,7 @@ then
 fi
 
 # Adds the startup scripts to .profile
-echo -e $startup"scripts.sh &\n"$startup"wm.sh &\n"$startup"xrandr.sh\n" > .profile
+echo -e "bash" $startup"scripts.sh &\nbash "$startup"wm.sh &\nbash "$startup"xrandr.sh\n" > .profile
 
 # "Frontend" whatever the hell that means
 echo "Startup scripts succcessfully configured!"
