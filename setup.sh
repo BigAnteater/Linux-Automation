@@ -11,18 +11,17 @@ mv startup/ .startup/ && cp -r .startup/ ~/ # Moves startup folder into ~ folder
 # Checks if .profile is existing. If not, $exists will stay at 0. If it does exist, then it changes it to 1.
 test -r ~/.profile && itExists=1
 
-# if it doesn't exist, it will create .profile.
+# If it doesn't exist, it will create .profile.
 if [ $itExists != 1 ]
 then
-	echo "looks like .profile don't exist. Creating one now"
+	echo "Looks like .profile don't exist. Creating one now"
 	touch ~/.profile
 fi
 
 # Adds the startup scripts to .profile
 echo -e $startup"scripts.sh &\n"$startup"wm.sh &\n"$startup"xrandr.sh\n" > .profile
 
-sleep 1s
-
+# "Frontend" whatever the hell that means
 echo "Startup scripts succcessfully configured!"
 sleep 2s
 echo "make sure to edit and configure the scripts in /home/$USER/.startup"
